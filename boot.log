@@ -1,0 +1,137 @@
+panic(cpu 2 caller 0xffffff8005e652fa): Kernel trap at 0xffffff7f890de937, type 14=page fault, registers:
+CR0: 0x000000008001003b, CR2: 0x0000000000000000, CR3: 0x000000001c918000, CR4: 0x00000000003626e0
+RAX: 0xffffff8038d00358, RBX: 0xffffff8037bbbfc0, RCX: 0xffffff8038d00300, RDX: 0xffffff80390b7a00
+RSP: 0xffffff81f820be90, RBP: 0xffffff81f820be90, RSI: 0x0000000000000000, RDI: 0x0000000000000000
+R8:  0xffffff80066a4490, R9:  0x0000000000000001, R10: 0x0000000000000188, R11: 0xffffff803810e3f0
+R12: 0xffffff8038d00350, R13: 0xffffff80390b7a00, R14: 0xffffff80390b7a00, R15: 0xffffff8038d00300
+RFL: 0x0000000000010246, RIP: 0xffffff7f890de937, CS:  0x0000000000000008, SS:  0x0000000000000000
+Fault CR2: 0x0000000000000000, Error code: 0x0000000000000000, Fault CPU: 0x2, PL: 0, VF: 1
+
+Backtrace (CPU 2), Frame : Return Address
+0xffffff81f820b8f0 : 0xffffff8005d3bb2b 
+0xffffff81f820b940 : 0xffffff8005e734d5 
+0xffffff81f820b980 : 0xffffff8005e64f4e 
+0xffffff81f820b9d0 : 0xffffff8005ce2a40 
+0xffffff81f820b9f0 : 0xffffff8005d3b217 
+0xffffff81f820baf0 : 0xffffff8005d3b5fb 
+0xffffff81f820bb40 : 0xffffff80064d2aa9 
+0xffffff81f820bbb0 : 0xffffff8005e652fa 
+0xffffff81f820bd30 : 0xffffff8005e64ff8 
+0xffffff81f820bd80 : 0xffffff8005ce2a40 
+0xffffff81f820bda0 : 0xffffff7f890de937 
+0xffffff81f820be90 : 0xffffff80064172e5 
+0xffffff81f820bef0 : 0xffffff800641a04b 
+0xffffff81f820bf50 : 0xffffff800641c8ad 
+0xffffff81f820bfa0 : 0xffffff8005ce213e 
+      Kernel Extensions in backtrace:
+         org.rehabman.voodoo.driver.PS2Controller(1.9.2)[E11711CB-AFEA-384E-97B8-B8EECB515995]@0xffffff7f890dc000->0xffffff7f890e6fff
+            dependency: com.apple.iokit.IOACPIFamily(1.4)[3D78401B-5D2D-33BC-9E41-DD2164EA874D]@0xffffff7f86e3d000
+
+BSD process name corresponding to current thread: Unknown
+Boot args: dart=0 nv_disable=1 -cdfon -igfxnohdmi alcid=28 debug=0x100 -v 
+
+Mac OS version:
+Not yet set
+
+Kernel version:
+Darwin Kernel Version 19.3.0: Thu Jan  9 20:58:23 PST 2020; root:xnu-6153.81.5~1/RELEASE_X86_64
+Kernel UUID: A8DDE75C-CD97-3C37-B35D-1070CC50D2CE
+Kernel slide:     0x0000000005a00000
+Kernel text base: 0xffffff8005c00000
+__HIB  text base: 0xffffff8005b00000
+System model name: MacBookPro14,3 (Mac-63001698E7A34814)
+System shutdown begun: NO
+Panic diags file unavailable, panic occurred prior to initialization
+
+System uptime in nanoseconds: 1939331590
+last loaded kext at 1574818178: >!ATopCaseHIDEventDriver	3430.1 (addr 0xffffff7f884e4000, size 61440)
+loaded kexts:
+com.alexandred.VoodooI2CHID	1
+com.insanelymac.RealtekRTL8111	2.3.0d7
+ru.joedm.SMCSuperIO	1.1.1
+net.osx86.kexts.GenericUSBXHCI	1.2.11
+com.alexandred.VoodooI2C	2.3
+org.rehabman.voodoo.driver.PS2!C	1.9.2
+org.coolstar.VoodooGPIO	1.1
+as.vit9696.SMCProcessor	1.1.1
+as.vit9696.!AALC	1.4.7
+xyz.racermaster.NoTouchID	1.0.2
+ru.usrsse2.SMCBatteryManager	1
+as.vit9696.VirtualSMC	1.1.1
+org.vanilla.driver.CPUFriend	1.2.0
+com.rehabman.driver.USBInjectAll	0.7.1
+as.vit9696.WhateverGreen	1.3.7
+as.vit9696.Lilu	1.4.2
+com.alexandred.VoodooI2CServices	1
+org.tgwbd.driver.NullCPUPowerManagement	1.0.0d2
+>!ATopCaseHIDEventDriver	3430.1
+@filesystems.apfs	1412.81.1
+>!ULegacyHub	900.4.2
+>!AAHCIPort	341.0.2
+>!ASmartBatteryManager	161.0.0
+>!ARTC	2.0
+>!AACPIEC	6.1
+>!AACPIButtons	6.1
+>!AHPET	1.8
+>!ASMBIOS	2.1
+>!AAPIC	1.7
+$!AImage4	1
+@nke.applicationfirewall	303
+$TMSafetyNet	8
+@!ASystemPolicy	2.0.0
+|EndpointSecurity	1
+>!AHS!BDriver	3430.1
+>IO!BHIDDriver	7.0.3f5
+|IO!B!F	7.0.3f5
+|IO!BPacketLogger	7.0.3f5
+>!AActuatorDriver	3430.1
+>!AMultitouchDriver	3430.1
+>!AInputDeviceSupport	3430.1
+>!AXsanScheme	3
+|IONVMe!F	2.1.0
+|IOGraphics!F	569.4
+|IOAHCIBlock!S	316.80.1
+|IOAHCI!F	290.0.1
+|IOUSB!F	900.4.2
+>usb.!UXHCIPCI	1.2
+>usb.!UXHCI	1.2
+>!AEFINVRAM	2.1
+>!AEFIRuntime	2.1
+|IOHID!F	2.0.0
+$quarantine	4
+$sandbox	300.0
+@kext.!AMatch	1.0.0d1
+|IOSMBus!F	1.1
+>DiskImages	493.0.0
+>!AFDEKeyStore	28.30
+>!AEffaceable!S	1.0
+>!AKeyStore	2
+>!UTDM	489.80.2
+|IOSCSIBlockCommandsDevice	422.0.2
+>!ACredentialManager	1.0
+>KernelRelayHost	1
+>!ASEPManager	1.0.1
+>IOSlaveProcessor	1
+|IOUSBMass!SDriver	157.40.7
+|IOSCSIArchitectureModel!F	422.0.2
+|IO!S!F	2.1
+|IOUSBHost!F	1.2
+>!UHostMergeProperties	1.2
+>usb.!UCommon	1.0
+>!ABusPower!C	1.0
+|CoreAnalytics!F	1
+>!AMobileFileIntegrity	1.0.5
+@kext.CoreTrust	1
+|IOTimeSync!F	810.1
+|IONetworking!F	3.4
+|IOReport!F	47
+>!AACPIPlatform	6.1
+>!ASMC	3.1.9
+>watchdog	1
+|IOPCI!F	2.9
+|IOACPI!F	1.4
+@kec.pthread	1
+@kec.corecrypto	1.0
+@kec.Libm	1
+
+
